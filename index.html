@@ -3,76 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sterling Land Group | General Construction</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Sterling Land Group | Precision Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0a0a;
-            --text: #ffffff;
-            --accent: #b71c1c; 
-            --gray: #1a1a1a;
-            --light-gray: #a0a0a0;
+            --bg: #fdfaf6;
+            --text: #1a1a1a;
+            --accent: #bd5e3c; /* Earthy Terracotta */
+            --card-bg: #ffffff;
+            --dark-section: #14110f;
         }
         
         * { box-sizing: border-box; }
-        body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
+        body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
 
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--bg); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222; }
-        .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: 1px; text-transform: uppercase; }
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 5%; background: var(--bg); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; text-transform: uppercase; }
         .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 30px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
-        .nav-links a { color: white; text-decoration: none; transition: 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
-        .nav-phone { color: #f1c40f; font-weight: 700; text-decoration: none; font-size: 0.9rem; }
+        .nav-links { display: flex; gap: 30px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #666; }
+        .contact-btn { background: var(--accent); color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-size: 0.9rem; font-weight: 700; }
 
-        .hero { 
-            height: 90vh; 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1541915059737-230090886697?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
-        }
-        .hero .sub-tag { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 20px; }
-        .hero h1 { font-size: 6rem; line-height: 0.9; margin: 0; font-weight: 900; max-width: 800px; text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; color: var(--light-gray); max-width: 500px; margin: 30px 0; line-height: 1.5; }
-        .hero-btns { display: flex; align-items: center; gap: 30px; }
-        .btn-red { background: var(--accent); color: white; padding: 20px 40px; text-decoration: none; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
-        .direct-line { font-size: 0.8rem; color: var(--light-gray); }
-        .direct-line span { display: block; font-size: 1.2rem; color: white; font-weight: 700; margin-top: 5px; }
+        /* Hero Section */
+        .hero { padding: 100px 10%; max-width: 1200px; }
+        .hero h1 { font-size: 6rem; line-height: 0.9; margin: 0; font-weight: 900; letter-spacing: -4px; }
+        .hero h1 span { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #999; letter-spacing: -2px; }
+        .hero p { font-size: 1.5rem; color: #555; max-width: 650px; margin: 40px 0; line-height: 1.4; }
+        .hero-btns { display: flex; gap: 20px; align-items: center; }
+        .btn-main { background: var(--accent); color: white; padding: 18px 35px; border-radius: 40px; text-decoration: none; font-weight: 700; }
+        .phone-link { font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.1rem; }
 
-        .area-bar { background: white; color: black; padding: 60px 10%; display: flex; justify-content: space-between; align-items: center; }
-        .area-label { font-size: 0.7rem; font-weight: 900; color: #ccc; text-transform: uppercase; }
-        .states { font-size: 2rem; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; }
-        .states span { color: #ddd; margin: 0 15px; }
+        /* Solutions/Services Section */
+        .solutions { background: #f7f3ed; padding: 100px 5%; }
+        .section-tag { color: var(--accent); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 20px; display: block; }
+        .solutions h2 { font-size: 3.5rem; margin: 0 0 60px 0; letter-spacing: -2px; }
+        .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .card { background: white; padding: 60px 40px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+        .card h3 { font-size: 2rem; margin-top: 0; }
+        .card p { color: #666; font-size: 1.1rem; line-height: 1.6; }
 
-        .details { display: flex; min-height: 600px; }
-        .details-map { flex: 1; background: #333; background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Arizona_in_United_States.svg/1200px-Arizona_in_United_States.svg.png'); background-size: cover; opacity: 0.5; }
-        .details-content { flex: 1; background: var(--gray); padding: 100px 8%; display: flex; flex-direction: column; justify-content: center; }
-        .details-content h2 { font-size: 3rem; margin: 0 0 40px; font-weight: 900; }
-        .details-content h2 span { color: #f1c40f; }
-        .service-list { border-top: 1px solid #333; padding-top: 30px; }
-        .service-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .service-item h3 { font-size: 1.5rem; margin: 0; }
-        .service-item p { color: var(--light-gray); font-size: 0.9rem; margin: 10px 0 0; }
+        /* Quote Section */
+        .quote-sec { background: var(--dark-section); color: white; padding: 150px 10%; text-align: center; }
+        .quote-sec h2 { font-size: 4.5rem; line-height: 1; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; max-width: 900px; margin: 0 auto; }
+        .quote-sec h2 span { color: var(--accent); font-family: 'Inter', sans-serif; font-style: normal; font-weight: 900; }
 
-        .contact { background: var(--bg); padding: 150px 10%; display: flex; justify-content: space-between; }
-        .contact-text h2 { font-size: 6rem; margin: 0; font-weight: 900; line-height: 0.9; }
-        .contact-text h2 span { color: var(--accent); }
-        .contact-info { margin-top: 100px; display: flex; gap: 60px; }
-        .info-box h4 { color: #555; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; }
-        .info-box p { font-size: 1.1rem; font-weight: 700; }
+        /* Footer / Contact */
+        footer { background: var(--dark-section); color: white; padding: 100px 5% 50px; border-top: 1px solid #222; }
+        .footer-cta { text-align: center; margin-bottom: 100px; }
+        .footer-cta h2 { font-size: 5rem; margin: 0 0 40px; letter-spacing: -3px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; border-top: 1px solid #222; padding-top: 50px; }
+        .footer-logo { font-weight: 900; font-size: 1.5rem; margin-bottom: 20px; }
 
-        .contact-form { background: var(--gray); padding: 60px; width: 450px; border: 1px solid #333; }
-        .contact-form h3 { text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 40px; }
-        .form-group { margin-bottom: 30px; }
-        .form-group label { display: block; text-transform: uppercase; font-size: 0.7rem; color: #666; margin-bottom: 10px; }
-        .form-group input { width: 100%; background: transparent; border: none; border-bottom: 1px solid #444; color: white; padding: 10px 0; font-size: 1rem; }
-        .submit-btn { width: 100%; background: white; color: black; border: none; padding: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; }
-
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
             .hero h1 { font-size: 3.5rem; }
-            .details, .contact { flex-direction: column; }
-            .contact-form { width: 100%; margin-top: 50px; }
-            .contact-text h2 { font-size: 4rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .footer-cta h2 { font-size: 3rem; }
         }
     </style>
 </head>
@@ -81,96 +66,36 @@
     <nav>
         <div class="logo">STERLING <span>LAND GROUP</span></div>
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
+            <a href="#" style="text-decoration:none; color:inherit;">Home</a>
+            <a href="#" style="text-decoration:none; color:inherit;">Projects</a>
+            <a href="#" style="text-decoration:none; color:inherit;">Process</a>
         </div>
-        <a href="tel:8402745290" class="nav-phone">📞 (840) 274-5290</a>
+        <a href="mailto:SterlingLandGroup@gmail.com" class="contact-btn">GET IN TOUCH</a>
     </nav>
 
     <section class="hero">
-        <div class="sub-tag">Excellence in Craftsmanship</div>
-        <h1>Southwest's <span>Trusted</span> Team.</h1>
-        <p>General contracting focused on <strong>uncompromising quality</strong> and transparent communication across California and Arizona.</p>
+        <h1>Projects that <span>really</span> work.</h1>
+        <p>Serving California and Arizona with high-end New Construction and Property Management. We build for longevity, clarity, and genuine craftsmanship.</p>
         <div class="hero-btns">
-            <a href="#contact" class="btn-red">Request a Free Estimate</a>
-            <div class="direct-line">DIRECT LINE <span>(840) 274-5290</span></div>
+            <a href="mailto:SterlingLandGroup@gmail.com" class="btn-main">START A PROJECT</a>
+            <a href="tel:8402745290" class="phone-link">(840) 274-5290</a>
         </div>
     </section>
 
-    <section class="area-bar">
-        <div>
-            <div class="area-label">Serving the Southwest</div>
-            <div class="states">CALIFORNIA <span>/</span> ARIZONA</div>
-        </div>
-        <div>
-            <div class="area-label">Strategic Partners</div>
-            <div class="nav-links" style="color: black; font-weight: 900;">HOMEOWNERS / REALTORS / GC'S</div>
-        </div>
-    </section>
-
-    <section class="details">
-        <div class="details-map"></div>
-        <div class="details-content">
-            <h2>Mastering Every <span>Architectural</span> Detail</h2>
-            
-            <div class="service-list">
-                <div class="service-item">
-                    <div>
-                        <h3>01 — New Construction</h3>
-                        <p>Ground-up residential and commercial builds with precision engineering.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div>
-                        <h3>02 — Roofing</h3>
-                        <p>High-durability roofing solutions built to withstand harsh desert climates.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div>
-                        <h3>03 — Drywall & Interior</h3>
-                        <p>Expert drywall installation, painting, and professional general contracting.</p>
-                    </div>
-                </div>
+    <section class="solutions">
+        <span class="section-tag">How we think</span>
+        <h2>Mastery is in every detail.</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>New Construction</h3>
+                <p>Ground-up residential and commercial builds. We map every nuance before a single shovel hits the ground, ensuring structural integrity and modern aesthetics.</p>
+            </div>
+            <div class="card">
+                <h3>Property Management</h3>
+                <p>High-tier management services for your assets. We maintain, secure, and optimize your property to ensure it remains a premier investment for years to come.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="contact-text">
-            <h2>HAVE A<br><span>VISION?</span></h2>
-            <div class="contact-info">
-                <div class="info-box">
-                    <h4>Inquiries</h4>
-                    <p>SterlingLandGroup@gmail.com</p>
-                </div>
-                <div class="info-box">
-                    <h4>24/7 Support</h4>
-                    <p>(840) 274-5290</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-form">
-            <h3>Free Consultation</h3>
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="John Doe">
-            </div>
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="email@example.com">
-            </div>
-            <button class="submit-btn">Submit Request</button>
-        </div>
-    </section>
-
-    <footer style="padding: 50px 10%; background: var(--bg); border-top: 1px solid #222; font-size: 0.7rem; color: #444; display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: 1px;">
-        <div>© 2026 Sterling Land Group. All Rights Reserved.</div>
-        <div>Privacy / Terms / Instagram</div>
-    </footer>
-
-</body>
-</html>
+    <section class="quote-sec">
+        <h2>"Construction is powerful. But it's only as good as the <span>thinking</span> behind it."</h2>
