@@ -1,69 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sterling Land Group | Precision Development</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #fdfaf6;
-            --text: #1a1a1a;
-            --accent: #bd5e3c;
-            --dark-section: #14110f;
-        }
-        
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TODO: Set the document title to the name of your application -->
+    <title>Lovable App</title>
+    <meta name="description" content="Lovable Generated Project">
+    <meta name="author" content="Lovable" />
 
-        /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 5%; background: var(--bg); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .logo { font-weight: 900; font-size: 1.2rem; letter-spacing: -1px; text-transform: uppercase; text-decoration: none; color: inherit; }
-        .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 30px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-        .nav-links a { text-decoration: none; color: #666; transition: 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
-        .phone-nav { color: var(--text); font-weight: 700; text-decoration: none; font-size: 0.9rem; }
+    <!-- TODO: Update og:title to match your application name -->
+    
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ccfc03f7-69dd-4ebd-bb69-cdd7653e0c4c/id-preview-993eb266--00cd7f75-4e38-47dd-ace1-806e77f31004.lovable.app-1775884732999.png">
 
-        /* Hero Section */
-        .hero { position: relative; padding: 150px 10%; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; color: white; }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('hero-bg.png'); background-size: cover; background-position: center; filter: brightness(0.6); z-index: -2; }
-        .hero h1 { font-size: 5rem; line-height: 0.9; margin: 0; font-weight: 900; letter-spacing: -3px; }
-        .hero h1 span { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #ccc; }
-        .hero p { max-width: 600px; font-size: 1.2rem; color: #ccc; margin: 30px 0; line-height: 1.5; }
-
-        /* Footer */
-        footer { background: var(--dark-section); color: white; padding: 100px 5%; text-align: center; }
-        .footer-logo { font-weight: 900; font-size: 2rem; margin-bottom: 20px; display: block; }
-        .footer-contact { font-size: 1.2rem; color: #999; margin-bottom: 40px; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-        }
-    </style>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ccfc03f7-69dd-4ebd-bb69-cdd7653e0c4c/id-preview-993eb266--00cd7f75-4e38-47dd-ace1-806e77f31004.lovable.app-1775884732999.png">
+    <meta property="og:title" content="Lovable App">
+  <meta name="twitter:title" content="Lovable App">
+  <meta property="og:description" content="Lovable Generated Project">
+  <meta name="twitter:description" content="Lovable Generated Project">
 </head>
-<body>
 
-    <nav>
-        <a href="index.html" class="logo">STERLING <span>LAND GROUP</span></a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a> 
-            <a href="tel:8402745290" class="phone-nav">(840) 274-5290</a>
-        </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <h1>Projects that <span>really</span> work.</h1>
-        <p>Serving California and Arizona with high-end New Construction and Property Management. We build for longevity, clarity, and genuine craftsmanship.</p>
-    </section>
-
-    <footer>
-        <span class="footer-logo">STERLING</span>
-        <div class="footer-contact">SterlingLandGroup@gmail.com | (840) 274-5290</div>
-        <p style="color: #444; font-size: 0.8rem; text-transform: uppercase;">© 2026 Sterling Land Group. All Rights Reserved.</p>
-    </footer>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
