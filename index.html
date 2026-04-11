@@ -3,66 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sterling Land Group | Projects That Work</title>
+    <title>Sterling Land Group | High-End Real Estate Development</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
+    <nav class="navbar">
         <div class="logo">Sterling Land Group</div>
         <div class="nav-links">
-            <a href="projects.html">Projects</a>
-            <a href="#contact" class="btn-nav">Contact Us</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact" class="nav-btn">Contact Us</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Projects that really work.</h1>
-            <p>New Construction & Property Management across Mohave Valley and California.</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn-primary">Get In Touch</a>
+    <main>
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Projects that really work.</h1>
+                <p>New Construction & Property Management | Mohave Valley & California</p>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="projects-preview">
-        <h2>Our Projects</h2>
-        <p class="subtitle">A portfolio of developments that define communities.</p>
-        
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="img-placeholder"></div>
-                <h3>1965 E Arditto</h3>
-            </div>
-            <div class="project-card">
-                <div class="img-placeholder"></div>
-                <h3>4579 Calle Amigo</h3>
-            </div>
-            <div class="project-card">
-                <div class="img-placeholder"></div>
-                <h3>13 Spanish Bay</h3>
-            </div>
-        </div>
-    </section>
+        <section id="projects" class="project-section">
+            <div class="container">
+                <h2 class="section-title">Featured Developments</h2>
+                
+                <div class="project-grid">
+                    
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="assets/images/project-1.jpg" alt="Modern Residential Development - Sterling Land Group" loading="lazy">
+                        </div>
+                        <div class="card-text">
+                            <h3>[Insert Project Title Here]</h3>
+                            <p>Mohave Valley, AZ</p>
+                        </div>
+                    </article>
 
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <p>Ready to start your next project? We'd love to hear from you.</p>
-        
-        <form action="https://formspree.io/f/xyzaabb" method="POST" class="contact-form">
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="_replyto" placeholder="Your Email" required>
-            </div>
-            <textarea name="message" rows="5" placeholder="Write your request..." required></textarea>
-            <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-    </section>
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="assets/images/project-2.jpg" alt="Premium Property Management Portfolio" loading="lazy">
+                        </div>
+                        <div class="card-text">
+                            <h3>[Insert Project Title Here]</h3>
+                            <p>Fort Mohave, AZ</p>
+                        </div>
+                    </article>
 
-    <footer>
-        <p>&copy; 2026 Sterling Land Group. (840) 274-5290</p>
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="assets/images/project-3.jpg" alt="Luxury Custom Build Site" loading="lazy">
+                        </div>
+                        <div class="card-text">
+                            <h3>[Insert Project Title Here]</h3>
+                            <p>Mohave Valley, AZ</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="assets/images/project-4.jpg" alt="Commercial Real Estate Complex" loading="lazy">
+                        </div>
+                        <div class="card-text">
+                            <h3>[Insert Project Title Here]</h3>
+                            <p>Mohave Valley, AZ</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Sterling Land Group | (840) 274-5290</p>
     </footer>
 
 </body>
