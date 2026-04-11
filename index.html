@@ -4,62 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sterling Land Group | Development & Construction</title>
-    <style>
-        :root { --primary: #1a2a6c; --accent: #f1c40f; --light: #f8f9fa; --dark: #2c3e50; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background-color: var(--light); }
-        header { background: var(--primary); color: white; padding: 80px 20px; text-align: center; }
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .project-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: white; transition: 0.3s; }
-        .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .project-img { background: #34495e; height: 220px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
-        .project-info { padding: 25px; }
-        h1 { margin: 0; font-size: 3rem; letter-spacing: 2px; }
-        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
-        .tag { background: var(--accent); color: var(--dark); padding: 5px 10px; font-size: 0.75rem; font-weight: bold; border-radius: 4px; text-transform: uppercase; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>STERLING LAND GROUP</h1>
-    <p>Premier Development & Construction | Mohave Valley, Arizona</p>
-</header>
-
-<div class="container">
-    <section id="about">
-        <h2>Expertise in the Desert</h2>
-        <p>Sterling Land Group is a full-service development firm specializing in the Mohave Valley area. From identifying high-potential tax lien properties to ground-up custom residential construction, we handle the entire development lifecycle.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Current & Past Projects</h2>
-        <div class="grid">
-            <div class="project-card">
-                <div class="project-img">PHOTO COMING SOON</div>
-                <div class="project-info">
-                    <span class="tag">Construction</span>
-                    <h3>Mohave Custom Build</h3>
-                    <p>Modern residential development in the heart of the valley.</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">PHOTO COMING SOON</div>
-                <div class="project-info">
-                    <span class="tag">Tax Liens</span>
-                    <h3>Land Acquisition</h3>
-                    <p>Strategically acquired lots through tax lien expertise.</p>
-                </div>
-            </div>
+    <nav class="navbar">
+        <div class="logo">Sterling Land Group</div>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#contact" class="nav-btn">Contact Us</a>
         </div>
-    </section>
-</div>
+    </nav>
 
-<footer style="text-align: center; padding: 60px; font-size: 0.9rem; color: #7f8c8d; background: #eee;">
-    &copy; 2026 Sterling Land Group. All Rights Reserved. <br>
-    Development | Construction | Acquisitions
-</footer>
+    <main>
+        <header class="hero">
+            <div class="hero-overlay">
+                <h1>Sterling Land Group</h1>
+                <p>Transforming land into thriving communities. Premium real estate development rooted in vision, quality, and lasting value.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-main">Contact Us</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="projects" class="container">
+            <h2 class="section-title">Our Projects</h2>
+            <p class="section-subtitle">A portfolio of developments that define communities and create lasting value.</p>
+            
+            <div class="project-grid">
+                <article class="project-card">
+                    <img src="assets/images/project-1.jpg" alt="1965 E Arditto Development">
+                    <h3>[Insert Project Title Here]</h3>
+                </article>
+                <article class="project-card">
+                    <img src="assets/images/project-2.jpg" alt="4579 Calle Amigo Modern Build">
+                    <h3>[Insert Project Title Here]</h3>
+                </article>
+                <article class="project-card">
+                    <img src="assets/images/project-3.jpg" alt="13 Spanish Bay Custom Estate">
+                    <h3>[Insert Project Title Here]</h3>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container small">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to start your next project? We'd love to hear from you.</p>
+                
+                <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea name="message" rows="6" placeholder="Write your request..." required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Sterling Land Group. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
