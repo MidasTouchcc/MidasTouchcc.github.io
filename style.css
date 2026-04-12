@@ -163,6 +163,11 @@ h1, h2, h3, .logo {
     margin-top: 1.5rem;
     font-size: 1.4rem;
     color: var(--dark-earth);
+    transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+    color: var(--terracotta);
 }
 
 .project-placeholder {
@@ -183,9 +188,24 @@ h1, h2, h3, .logo {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover .project-placeholder {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+/* --- Interior Project Gallery --- */
+.interior-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for a high-end look */
+    gap: 1.5rem;
+}
+
+.interior-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Clean squares for the interior detail shots */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.interior-gallery img:hover {
+    transform: scale(1.02);
 }
 
 /* --- Contact Form --- */
@@ -248,5 +268,9 @@ footer {
     
     .navbar {
         padding: 1.5rem 2rem;
+    }
+
+    .interior-gallery {
+        grid-template-columns: 1fr; /* Stacks gallery photos on mobile */
     }
 }
