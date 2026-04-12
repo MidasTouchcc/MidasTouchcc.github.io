@@ -1,116 +1,58 @@
-/* Color Palette & Variables */
-:root {
-    --terracotta: #C0783F;
-    --dark-earth: #2D2926;
-    --cream: #F9F7F4;
-    --white: #ffffff;
-    --text-main: #4A4A4A;
-    --border-light: #E0E0E0;
+/* --- Typography & Spacing Fixes --- */
+.section-title { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 3rem; 
+    text-align: center; 
+    margin-bottom: 0.5rem; 
+    color: var(--dark-earth);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
+.section-subtitle { 
     font-family: 'Inter', sans-serif;
-    background-color: var(--white);
-    color: var(--text-main);
-    line-height: 1.6;
+    text-align: center; 
+    margin-bottom: 4rem; /* Increased to give the grid room to breathe */
+    color: #666; 
+    font-size: 1.1rem;
+    font-weight: 300;
 }
 
-h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--dark-earth); }
-
-/* Navigation */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 5%;
-    background: var(--white);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo { font-size: 1.4rem; font-weight: 600; }
-.nav-links a { text-decoration: none; color: var(--text-main); margin-left: 2rem; font-size: 0.9rem; }
-.nav-btn { background: var(--terracotta); color: white !important; padding: 0.6rem 1.2rem; border-radius: 4px; }
-
-/* Hero Section */
-.hero {
-    height: 85vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.hero-overlay h1 { color: white; font-size: 4rem; margin-bottom: 1rem; }
-.hero-overlay p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; font-weight: 300; }
-
-.btn-main {
-    background: var(--terracotta);
-    color: white;
-    text-decoration: none;
-    padding: 1rem 2.5rem;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn-main:hover { opacity: 0.9; transform: translateY(-2px); }
-
-/* Grid Layout */
-.container { padding: 80px 5%; max-width: 1300px; margin: auto; }
-.container.small { max-width: 800px; }
-
-.section-title { font-size: 2.5rem; text-align: center; margin-bottom: 0.5rem; }
-.section-subtitle { text-align: center; margin-bottom: 3rem; color: #888; }
-
+/* --- Project Grid & Cards --- */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
+}
+
+.project-card {
+    border: none; /* Removed heavy borders for a cleaner look */
+    background: transparent;
 }
 
 .project-card img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    aspect-ratio: 4 / 3; /* Forces all images to the exact same professional size */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 6px; /* Subtle rounding, not too harsh */
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Soft, high-end drop shadow */
+    transition: transform 0.3s ease;
 }
 
-.project-card h3 { font-size: 1.4rem; text-align: center; }
-
-/* Contact Form */
-.contact-section { background-color: var(--cream); }
-
-.contact-form { display: flex; flex-direction: column; gap: 1rem; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-input, textarea {
-    padding: 1rem;
-    border: 1px solid var(--border-light);
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+.project-card img:hover {
+    transform: translateY(-5px); /* Elegant lift on hover */
 }
 
-.btn-submit {
-    background: var(--terracotta);
-    color: white;
-    border: none;
-    padding: 1.2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
+.project-card h3 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.5rem; 
+    text-align: center; 
+    color: var(--dark-earth);
+    margin: 0;
 }
 
-/* Responsive Logic */
+/* --- Mobile Responsiveness (Keep this at the bottom of your CSS) --- */
 @media (max-width: 900px) {
-    .project-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .hero-overlay h1 { font-size: 2.5rem; }
+    .project-grid { 
+        grid-template-columns: 1fr; /* Stacks to 1 column on phones */
+    }
 }
